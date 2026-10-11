@@ -12,6 +12,6 @@
 
 应用与旧 Via 独立：appId com.worldasoyster.via.localmarkdown，快捷方式 Via Local，数据目录 %APPDATA%/via-local-markdown。卸载保留本机记录；旧 Via 1.1.1 的目录不做迁移或覆盖。
 
-未签名安装包；校验 SHA256SUMS.txt。此包为 alpha 试用版，真实邮箱送达、干净 Windows 环境与双屏/多窗口需要继续验收；不要将预制示例当作真实模型调用结果。GitHub 公开下载链接尚未发布。
+未签名安装包；校验 SHA256SUMS.txt。此包为 alpha 试用版，真实邮箱送达、干净 Windows 环境与双屏/多窗口需要继续验收；不要将预制示例当作真实模型调用结果。GitHub 下载：[v0.1.0-alpha.8 预发布版本](https://github.com/WorldAsOyster/Via-for-Vibe-Reading/releases/tag/v0.1.0-alpha.8)。
 
 主窗口关闭后 Via 在托盘继续运行；需要完全退出时，右键 Via 托盘图标选择“退出 Via”。

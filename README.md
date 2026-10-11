@@ -46,6 +46,10 @@ Via 是为这个过程做的 **本机 Markdown 阅读伙伴**。你在 Typora �
 
 当前为 **Windows x64 / Typora / 0.1.0-alpha.8** 试用版。首次启动会将两份示例 Markdown 和20条示例批注初始化到本机，方便快速体验。
 
+[下载 Windows x64 安装包](https://github.com/WorldAsOyster/Via-for-Vibe-Reading/releases/download/v0.1.0-alpha.8/Via-0.1.0-alpha.8-Setup-x64.exe) · [发布说明与校验和](https://github.com/WorldAsOyster/Via-for-Vibe-Reading/releases/tag/v0.1.0-alpha.8)
+
+从源码运行：
+
 ```powershell
 cd typora-app
 npm ci
@@ -56,7 +60,7 @@ npm run desktop
 
 [完整使用说明](docs/GETTING_STARTED.md) · [当前能力与验收状态](docs/STATUS.md) · [反馈与建议](https://github.com/WorldAsOyster/Via-for-Vibe-Reading/issues)
 
-源码可用 `npm run build:win` 构建安装包，尚未发布 GitHub Release。代码公开供查看，暂未授予开源许可证，© 2026 WorldAsOyster，保留全部权利。
+源码可用 `npm run build:win` 构建安装包。代码公开供查看，暂未授予开源许可证，© 2026 WorldAsOyster，保留全部权利。
 
 ## 它怎样工作
 
