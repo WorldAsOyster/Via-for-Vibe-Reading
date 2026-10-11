@@ -1,0 +1,10 @@
+name: 使用建议
+description: 告诉我们你想改善哪个阅读场景
+title: "[Idea] "
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 场景、当前困难与期待的体验
+    validations:
+      required: true

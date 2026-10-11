@@ -1,0 +1,22 @@
+{
+  "name": "via-local-markdown",
+  "version": "0.1.0-alpha.8",
+  "private": true,
+  "description": "Via - AI reading companion for Windows",
+  "author": "WorldAsOyster",
+  "license": "UNLICENSED",
+  "main": "src/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "desktop": "electron . --via-desktop",
+    "test": "node --test test/*.test.cjs",
+    "build:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-windows.ps1"
+  },
+  "dependencies": {
+    "markdown-it": "14.1.0"
+  },
+  "devDependencies": {
+    "electron": "44.4.5",
+    "electron-builder": "26.15.3"
+  }
+}

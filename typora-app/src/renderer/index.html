@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Via · Typora</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="titlebar">
+      <button class="brand" id="openDesktop" type="button" title="打开 Via 主界面" aria-label="打开 Via 主界面">v</button>
+      <strong id="documentTitle" title="Via">Via</strong>
+      <div class="window-controls">
+        <button id="minimizeWindow" title="最小化" aria-label="最小化">−</button>
+        <button id="closeWindow" title="关闭 Via" aria-label="关闭 Via">×</button>
+      </div>
+    </header>
+    <nav class="toolbar" aria-label="Via 视图">
+      <button class="tab active" data-tab="notes"><span id="questionCount" class="question-count">0/0</span>文档批注</button>
+      <button class="tab" data-tab="review">阅读复盘</button>
+      <button class="export-btn" id="exportButton" title="选择导出范围">导出 ↧</button>
+    </nav>
+    <main class="content" id="content"></main>
+    <section class="composer" id="composer"></section>
+  </div>
+
+  <div class="overlay" id="exportOverlay" role="dialog" aria-modal="true" aria-label="导出文档">
+    <div class="dialog"><h2>导出这篇文档</h2><p>保留未解决的批注与完整问答。</p>
+      <button class="choice" id="exportMarkdown"><strong>仅引用与问答 · Markdown</strong><small>按原文位置整理引用、问题与回复</small></button>
+      <button class="choice" id="exportPdf"><strong>原文与全部批注 · PDF</strong><small>先预览排版，再保存 PDF</small></button>
+      <button class="dialog-close" data-close-overlay>取消</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="../shared/markdown-it.min.js"></script>
+  <script src="../shared/search-evidence.js"></script>
+  <script src="../shared/export-scope.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

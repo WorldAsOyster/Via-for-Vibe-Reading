@@ -1,0 +1,15 @@
+name: 问题反馈
+description: 帮助改进 Via 的真实阅读体验
+title: "[Bug] "
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: 操作步骤、预期与实际表现
+      description: 请附 Via/Windows/Typora 版本；截图请遮盖密钥、邮箱及私人文档。
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 截图与补充信息

@@ -1,0 +1,831 @@
+{
+  "sources": [
+    {
+      "id": "anker-plan",
+      "sourceType": "typora",
+      "name": "安克录音豆×豆包工作2.0产品策划文档.md",
+      "documentPath": "示例文档 / 安克录音豆×豆包工作2.0产品策划文档.md",
+      "exists": true,
+      "lastOpenedAt": "2026-10-11T02:00:00Z",
+      "updatedAt": "2026-10-11T02:00:00Z",
+      "todoStates": {},
+      "recap": {
+        "topics": [
+          "闭环指标与价值验证"
+        ],
+        "recommendations": []
+      },
+      "comments": [
+        {
+          "id": "c-adoption",
+          "presetRevision": 1,
+          "quote": "建议动作采纳率（被确认执行的动作 / 建议动作总数）",
+          "saved": true,
+          "savedAt": "2026-10-11T02:00:00Z",
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 7193
+          },
+          "contextSnapshot": "建议动作采纳率（被确认执行的动作 / 建议动作总数）",
+          "messages": [
+            {
+              "id": "q-adoption",
+              "role": "user",
+              "text": "@Via 生成了纪要，就算完成了 Agent 闭环吗？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-adoption",
+              "role": "via",
+              "text": "不算。策划文档把闭环价值拆成卡片生成率、建议动作采纳率、每段录音平均完成动作数与执行成功率。纪要生成只证明内容产出；还要观察用户是否确认动作、目标对象是否创建成功，以及卡片是否收到结果回写。建议把这些阶段分别埋点，避免把「生成」混成「完成」。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-adoption",
+              "source": "4.4 成功标准 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "task-adoption",
+              "role": "user",
+              "text": "@Codex 请补充生成、采纳、执行与回写四阶段的埋点及分母。",
+              "replyTo": "a-adoption",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-value",
+          "presetRevision": 1,
+          "quote": "每段录音平均完成动作数",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-10T02:00:00Z",
+          "anchor": {
+            "offset": 7220
+          },
+          "contextSnapshot": "每段录音平均完成动作数",
+          "messages": [
+            {
+              "id": "q-value",
+              "role": "user",
+              "text": "@Via 为什么要统计每段录音完成动作数？",
+              "createdAt": "2026-10-10T02:00:00Z"
+            },
+            {
+              "id": "a-value",
+              "role": "via",
+              "text": "它用于判断录音内容是否转化为实际行动。建议动作数衡量产出，采纳率衡量用户接受程度，完成动作数衡量落地结果。三个指标应分开看；研发附件还需明确失败、撤销和重试的去重口径。策划文档目前没有基线，也没有承诺提升幅度。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-value",
+              "source": "4.4 成功标准 · 评审提案",
+              "createdAt": "2026-10-10T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-software-scope",
+          "presetRevision": 2,
+          "quote": "硬件是否改款推迟到 P2 凭数据决策。",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 553
+          },
+          "contextSnapshot": "硬件是否改款推迟到 P2 凭数据决策。",
+          "messages": [
+            {
+              "id": "q-software-scope",
+              "role": "user",
+              "text": "@Via 为什么先做软件 2.0，而不是一起改硬件？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-software-scope",
+              "role": "via",
+              "text": "按本提案，P0 先验证录音之后的动作闭环，硬件改款到 P2 再凭数据决定。先记录动作采纳、完成情况和采集失败原因，再判断价值来自后续流程还是必须依赖新硬件。这不是已经确定的量产排期。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-software-scope",
+              "source": "1.1 我们要推动的决定 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-compatible-binding",
+          "presetRevision": 2,
+          "quote": "并存而非替代",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 621
+          },
+          "contextSnapshot": "并存而非替代",
+          "messages": [
+            {
+              "id": "q-compatible-binding",
+              "role": "user",
+              "text": "@Via 如何验证升级没有破坏老用户的妙记体验？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-compatible-binding",
+              "role": "via",
+              "text": "策划稿要求两种绑定并存。验收应把原录音、上传、转写和妙记查看链路作为回归基线，再测新增授权、撤销及豆包故障。还要确认关闭新功能后原体验可继续。技术 PRD 的关联授权方案仍需依赖方评审。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-compatible-binding",
+              "source": "1.2 本期范围 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-card-context",
+          "presetRevision": 2,
+          "quote": "关联日历、参会人与项目上下文",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 683
+          },
+          "contextSnapshot": "关联日历、参会人与项目上下文",
+          "messages": [
+            {
+              "id": "q-card-context",
+              "role": "user",
+              "text": "@Via 日历上同时有两场会议，应该关联哪一场？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-card-context",
+              "role": "via",
+              "text": "这句话只提出关联能力，没有给出唯一匹配规则。建议结合录音时间、用户可访问的参会人与项目线索提供候选；仍有歧义时请用户选择，证据不足则只生成基于录音的纪要。不要默认挑第一场。具体匹配规则需要真实样本验证。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-card-context",
+              "source": "1.2 本期范围 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "followup-card-context",
+              "role": "user",
+              "text": "先保留候选会议，不让错误关联进入执行参数。",
+              "replyTo": "a-card-context",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-manual-boundary",
+          "presetRevision": 2,
+          "quote": "Agent 动作默认人工把关",
+          "saved": true,
+          "savedAt": "2026-10-11T02:00:00Z",
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 843
+          },
+          "contextSnapshot": "Agent 动作默认人工把关",
+          "messages": [
+            {
+              "id": "q-manual-boundary",
+              "role": "user",
+              "text": "@Via 人工把关和低风险预授权如何兼容？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-manual-boundary",
+              "role": "via",
+              "text": "默认需要用户确认；预授权应是用户明确开启的例外，限定对象、动作类型和参数范围。两份文档已经提到低风险预授权，但范围、撤销和参数变化后的再次确认还需细化。对外发送与共享数据修改应按各自条款保留明确确认。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-manual-boundary",
+              "source": "1.3 明确不做 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-after-meeting",
+          "presetRevision": 2,
+          "quote": "遗漏与拖延最常发生在这段「会后一小时」。",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 3611
+          },
+          "contextSnapshot": "遗漏与拖延最常发生在这段「会后一小时」。",
+          "messages": [
+            {
+              "id": "q-after-meeting",
+              "role": "user",
+              "text": "@Via 如何验证「会后一小时」确实是首要痛点？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-after-meeting",
+              "role": "via",
+              "text": "这是策划稿的场景判断，还需验证。可以追踪一次真实拜访后的承诺整理、建任务和跟进时间，比较有无卡片时的遗漏与完成情况。先确认高频且影响结果的环节，再决定提醒和动作优先级。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-after-meeting",
+              "source": "3.1 用户问题 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-plan-acceptance",
+          "presetRevision": 2,
+          "quote": "卡片生成率",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 7187
+          },
+          "contextSnapshot": "卡片生成率",
+          "messages": [
+            {
+              "id": "q-plan-acceptance",
+              "role": "user",
+              "text": "@Gemini 请整理指标验收表，分别列出生成、确认、执行、回写的事件、分母、去重规则和异常处理。",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-plan-customer-task",
+          "presetRevision": 2,
+          "quote": "创建跟进任务并建议责任人与期限",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 5564
+          },
+          "contextSnapshot": "创建跟进任务并建议责任人与期限",
+          "messages": [
+            {
+              "id": "q-plan-customer-task",
+              "role": "user",
+              "text": "@产品同事 请用真实客户拜访录音核对责任人、截止时间与客户承诺的提取结果，记录需要用户补填的字段。",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-plan-judgment",
+          "presetRevision": 2,
+          "quote": "纪要之后，价值链就结束了",
+          "saved": true,
+          "savedAt": "2026-10-11T02:00:00Z",
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 3082
+          },
+          "contextSnapshot": "纪要之后，价值链就结束了",
+          "messages": [
+            {
+              "id": "q-plan-judgment",
+              "role": "user",
+              "text": "评审记录：演示必须展示确认后的实际结果及回写，不能只停在纪要卡片；原有链路也要能继续使用。",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anker-prd",
+      "sourceType": "typora",
+      "name": "安克录音豆2.0（豆包工作融合）P0技术评审PRD.md",
+      "documentPath": "示例文档 / 安克录音豆2.0（豆包工作融合）P0技术评审PRD.md",
+      "exists": true,
+      "lastOpenedAt": "2026-10-11T02:00:00Z",
+      "updatedAt": "2026-10-11T02:00:00Z",
+      "todoStates": {},
+      "recap": {
+        "topics": [
+          "幂等与重试",
+          "权限边界",
+          "人工确认"
+        ],
+        "recommendations": []
+      },
+      "comments": [
+        {
+          "id": "c-idempotency",
+          "presetRevision": 1,
+          "quote": "幂等键保证「确认一次、生效一次」。",
+          "saved": true,
+          "savedAt": "2026-10-11T02:00:00Z",
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 21374
+          },
+          "contextSnapshot": "幂等键保证「确认一次、生效一次」。",
+          "messages": [
+            {
+              "id": "q-idempotency",
+              "role": "user",
+              "text": "@Via 已经确认过的动作重试时，为什么还需要幂等？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-idempotency",
+              "role": "via",
+              "text": "超时不等于执行失败：目标对象可能已经创建，只是回执丢了。如果每次重试都当成新请求，就可能重复建任务。PRD 要求消费端幂等，并用动作幂等键保证同一个执行意图只生效一次。重试应复用同一意图的键；用户修改关键参数产生新意图时，需要另行定义版本与键的关系。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-idempotency",
+              "source": "9.5 一致性与可靠性 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "task-idempotency",
+              "role": "user",
+              "text": "@Claude 请补充执行已成功但回执丢失的幂等回归用例。",
+              "replyTo": "a-idempotency",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-acl",
+          "presetRevision": 1,
+          "quote": "只能使用该用户本人有权访问的内容",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 12728
+          },
+          "contextSnapshot": "只能使用该用户本人有权访问的内容",
+          "messages": [
+            {
+              "id": "q-acl",
+              "role": "user",
+              "text": "@Via 企业买的设备，能让 Agent 读到所有项目文档吗？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-acl",
+              "role": "via",
+              "text": "不能。FR-4 要求按当前用户权限过滤上下文，企业采购设备不能扩大个人权限。无权访问的文档不能进入 Agent 输入，也不能出现在卡片中。企业模式在这份提案中属于 P1；P0 应复用现有 ACL，并保留可审计的检索与注入记录。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-acl",
+              "source": "FR-4 上下文关联与增强 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-binding",
+          "presetRevision": 1,
+          "quote": "妙记侧原绑定保持有效（双绑定并存）。",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-10T02:00:00Z",
+          "anchor": {
+            "offset": 6232
+          },
+          "contextSnapshot": "妙记侧原绑定保持有效（双绑定并存）。",
+          "messages": [
+            {
+              "id": "q-binding",
+              "role": "user",
+              "text": "@Via 双绑定是要重新建立一套设备绑定吗？",
+              "createdAt": "2026-10-10T02:00:00Z"
+            },
+            {
+              "id": "a-binding",
+              "role": "via",
+              "text": "不是。技术评审稿建议采用「关联授权」：妙记保留原设备绑定，豆包获得用户已授权设备的关系及事件订阅资格。新增的是控制与事件链路。设备标识和归属权威源仍是 D-3 待确认项，不能把这份提案当作已上线的接口能力。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-binding",
+              "source": "5.3 双绑定的技术含义 · 评审提案",
+              "createdAt": "2026-10-10T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-draft",
+          "presetRevision": 1,
+          "quote": "P0 不提供自动发送",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-10T02:00:00Z",
+          "anchor": {
+            "offset": 14053
+          },
+          "contextSnapshot": "P0 不提供自动发送",
+          "messages": [
+            {
+              "id": "q-draft",
+              "role": "user",
+              "text": "@Via 自动生成邮件草稿，等于自动发给同事吗？",
+              "createdAt": "2026-10-10T02:00:00Z"
+            },
+            {
+              "id": "a-draft",
+              "role": "via",
+              "text": "不等于。FR-6 区分生成草稿与对外发送，P0 不提供自动发送。共享表格、共享文档和邀请他人的日程还需要显式确认。私人任务与个人文档存在预授权条款，策划文档也允许低风险动作预授权；还需要细化授权范围、撤销方式和默认值。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-draft",
+              "source": "FR-6 动作确认、编辑与删除 · 评审提案",
+              "createdAt": "2026-10-10T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-revision-confirm",
+          "presetRevision": 2,
+          "quote": "用户编辑参数后视为**新版本**",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 20871
+          },
+          "contextSnapshot": "用户编辑参数后视为**新版本**",
+          "messages": [
+            {
+              "id": "q-revision-confirm",
+              "role": "user",
+              "text": "@Via 已确认的任务改了截止日期，还能沿用原确认吗？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-revision-confirm",
+              "role": "via",
+              "text": "按 Action Schema 提案，参数编辑形成新版本，幂等键递增 revision，并要求重新确认。需要区分旧版本是否已经执行；不能把新参数悄悄塞入正在执行的旧请求。界面应显示新版本的确认内容，执行和回写也要绑定对应版本。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-revision-confirm",
+              "source": "9.4 统一动作协议 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "followup-revision-confirm",
+              "role": "user",
+              "text": "@Codex 请补充编辑时旧版本正在执行、旧版本已成功两类竞态用例。",
+              "replyTo": "a-revision-confirm",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-summary-ready",
+          "presetRevision": 2,
+          "quote": "transcript_status != completed",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 18884
+          },
+          "contextSnapshot": "transcript_status != completed",
+          "messages": [
+            {
+              "id": "q-summary-ready",
+              "role": "user",
+              "text": "@Via 收到录音事件就可以立即生成动作卡片吗？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-summary-ready",
+              "role": "via",
+              "text": "不可以。入站事件约束要求转写 completed 才进入卡片流程，同时以妙记对象标识幂等去重，签名失败直接拒绝并告警。未完成的转写可能遗漏承诺或责任人。事件到达与内容可用是两个状态，应分别记录。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-summary-ready",
+              "source": "9.2 入站事件 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-failure-isolation",
+          "presetRevision": 2,
+          "quote": "事件消费失败只在豆包侧重试 / 死信，不阻塞妙记。",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 21488
+          },
+          "contextSnapshot": "事件消费失败只在豆包侧重试 / 死信，不阻塞妙记。",
+          "messages": [
+            {
+              "id": "q-failure-isolation",
+              "role": "user",
+              "text": "@Via 豆包生成卡片失败，会让妙记也无法查看录音吗？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-failure-isolation",
+              "role": "via",
+              "text": "按一致性提案，不应影响妙记原链路。失败在豆包侧有限重试、进入死信并告警，用户仍可查看妙记原记录。应用故障演练验证事件消费失败、模型超时和工具限流分别被隔离，不能用无限重试掩盖错误。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-failure-isolation",
+              "source": "9.5 一致性与可靠性 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-deletion-policy",
+          "presetRevision": 2,
+          "quote": "级联删除或匿名化",
+          "saved": true,
+          "savedAt": "2026-10-11T02:00:00Z",
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 22279
+          },
+          "contextSnapshot": "级联删除或匿名化",
+          "messages": [
+            {
+              "id": "q-deletion-policy",
+              "role": "user",
+              "text": "@Via 删除妙记之后，卡片和上下文快照怎么处理？",
+              "createdAt": "2026-10-11T02:00:00Z"
+            },
+            {
+              "id": "a-deletion-policy",
+              "role": "via",
+              "text": "评审稿还没有最终答案。10.4 把派生内容的级联删除或匿名化列为 M0 与法务待确认项；审计留存也需要安全要求。研发应明确删除传播、失败重试与审计例外，不能自行承诺全部永久保留或即时清空。",
+              "model": "demo",
+              "status": "answered",
+              "replyTo": "q-deletion-policy",
+              "source": "10.4 留存、删除与审计 · 评审提案",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-offline-test",
+          "presetRevision": 2,
+          "quote": "离线录音 → 回连补传 → 迟到事件",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 26055
+          },
+          "contextSnapshot": "离线录音 → 回连补传 → 迟到事件",
+          "messages": [
+            {
+              "id": "q-offline-test",
+              "role": "user",
+              "text": "@测试同事 请覆盖跨天回连补传、重复迟到事件和撤销授权后补传，核对录音归日、卡片数量及原妙记链路。",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "c-rollout-note",
+          "presetRevision": 2,
+          "quote": "仅内部核对准确率与成本",
+          "saved": false,
+          "savedAt": null,
+          "createdAt": "2026-10-11T02:00:00Z",
+          "anchor": {
+            "offset": 27180
+          },
+          "contextSnapshot": "仅内部核对准确率与成本",
+          "messages": [
+            {
+              "id": "q-rollout-note",
+              "role": "user",
+              "text": "评审记录：G0 影子运行先核对建议质量和单段成本；不推送、不执行。进入 G1 的准出依据应留在验收记录中。",
+              "createdAt": "2026-10-11T02:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dailyReview": {
+    "reminderTime": "20:30",
+    "days": {
+      "2026-10-10": {
+        "date": "2026-10-10",
+        "status": "ready",
+        "version": 1,
+        "generatedAt": "2026-10-10T12:30:00Z",
+        "isDemo": true,
+        "questions": [
+          {
+            "id": "binding",
+            "doc": 1,
+            "day": "2026-10-10",
+            "quote": "妙记侧原绑定保持有效（双绑定并存）。",
+            "question": "@Via 双绑定是要重新建立一套设备绑定吗？",
+            "answer": "不是。技术评审稿建议采用「关联授权」：妙记保留原设备绑定，豆包获得用户已授权设备的关系及事件订阅资格。新增的是控制与事件链路。设备标识和归属权威源仍是 D-3 待确认项，不能把这份提案当作已上线的接口能力。",
+            "title": "双绑定在这份 PRD 中是什么意思？",
+            "options": [
+              "取消妙记，全部迁到豆包",
+              "保留原绑定并新增关联授权",
+              "复制音频到两套硬件"
+            ],
+            "correct": 1,
+            "topic": "关联授权",
+            "section": "5.3 双绑定的技术含义",
+            "sourceId": "anker-prd",
+            "commentId": "c-binding",
+            "messageId": "q-binding",
+            "originalQuestion": "@Via 双绑定是要重新建立一套设备绑定吗？",
+            "explanation": "不是。技术评审稿建议采用「关联授权」：妙记保留原设备绑定，豆包获得用户已授权设备的关系及事件订阅资格。新增的是控制与事件链路。设备标识和归属权威源仍是 D-3 待确认项，不能把这份提案当作已上线的接口能力。"
+          },
+          {
+            "id": "draft",
+            "doc": 1,
+            "day": "2026-10-10",
+            "quote": "P0 不提供自动发送",
+            "question": "@Via 自动生成邮件草稿，等于自动发给同事吗？",
+            "answer": "不等于。FR-6 区分生成草稿与对外发送，P0 不提供自动发送。共享表格、共享文档和邀请他人的日程还需要显式确认。私人任务与个人文档存在预授权条款，策划文档也允许低风险动作预授权；还需要细化授权范围、撤销方式和默认值。",
+            "title": "P0 自动生成邮件草稿后，会发生什么？",
+            "options": [
+              "直接发送给收件人",
+              "自动给所有参会人抄送",
+              "停留在草稿，发送由用户决定"
+            ],
+            "correct": 2,
+            "topic": "人工确认",
+            "section": "FR-6 动作确认、编辑与删除",
+            "sourceId": "anker-prd",
+            "commentId": "c-draft",
+            "messageId": "q-draft",
+            "originalQuestion": "@Via 自动生成邮件草稿，等于自动发给同事吗？",
+            "explanation": "不等于。FR-6 区分生成草稿与对外发送，P0 不提供自动发送。共享表格、共享文档和邀请他人的日程还需要显式确认。私人任务与个人文档存在预授权条款，策划文档也允许低风险动作预授权；还需要细化授权范围、撤销方式和默认值。"
+          },
+          {
+            "id": "value",
+            "doc": 0,
+            "day": "2026-10-10",
+            "quote": "每段录音平均完成动作数",
+            "question": "@Via 为什么要统计每段录音完成动作数？",
+            "answer": "它用于判断录音内容是否转化为实际行动。建议动作数衡量产出，采纳率衡量用户接受程度，完成动作数衡量落地结果。三个指标应分开看；研发附件还需明确失败、撤销和重试的去重口径。策划文档目前没有基线，也没有承诺提升幅度。",
+            "title": "完成动作数主要回答哪个问题？",
+            "options": [
+              "录音有没有转化为实际行动",
+              "设备是否更轻",
+              "生成纪要的文字是否更多"
+            ],
+            "correct": 0,
+            "topic": "价值验证",
+            "section": "4.4 成功标准",
+            "sourceId": "anker-plan",
+            "commentId": "c-value",
+            "messageId": "q-value",
+            "originalQuestion": "@Via 为什么要统计每段录音完成动作数？",
+            "explanation": "它用于判断录音内容是否转化为实际行动。建议动作数衡量产出，采纳率衡量用户接受程度，完成动作数衡量落地结果。三个指标应分开看；研发附件还需明确失败、撤销和重试的去重口径。策划文档目前没有基线，也没有承诺提升幅度。"
+          }
+        ],
+        "choices": {},
+        "submittedAt": null,
+        "articles": [
+          {
+            "title": "Making retries safe with idempotent APIs",
+            "publisher": "Amazon Builders’ Library",
+            "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+            "topic": "幂等与重试",
+            "reason": "结合超时重试，理解如何识别同一个请求意图并避免重复副作用。"
+          },
+          {
+            "title": "Authorization Cheat Sheet",
+            "publisher": "OWASP",
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+            "topic": "权限边界",
+            "reason": "把最小权限与逐次权限检查落实到上下文检索和工具执行。"
+          },
+          {
+            "title": "Building effective agents",
+            "publisher": "Anthropic",
+            "url": "https://www.anthropic.com/engineering/building-effective-agents",
+            "topic": "闭环指标",
+            "reason": "理解固定工作流与自主 Agent 的边界，再决定确认、工具与评估如何组合。"
+          }
+        ],
+        "conversation": []
+      },
+      "2026-10-11": {
+        "date": "2026-10-11",
+        "status": "ready",
+        "version": 1,
+        "generatedAt": "2026-10-11T12:30:00Z",
+        "isDemo": true,
+        "questions": [
+          {
+            "id": "adoption",
+            "doc": 0,
+            "day": "2026-10-11",
+            "quote": "建议动作采纳率（被确认执行的动作 / 建议动作总数）",
+            "question": "@Via 生成了纪要，就算完成了 Agent 闭环吗？",
+            "answer": "不算。策划文档把闭环价值拆成卡片生成率、建议动作采纳率、每段录音平均完成动作数与执行成功率。纪要生成只证明内容产出；还要观察用户是否确认动作、目标对象是否创建成功，以及卡片是否收到结果回写。建议把这些阶段分别埋点，避免把「生成」混成「完成」。",
+            "title": "哪项更能说明录音已经走到「办事」？",
+            "options": [
+              "只看纪要是否生成",
+              "确认动作、执行结果与回写",
+              "只看录音时长"
+            ],
+            "correct": 1,
+            "topic": "闭环指标",
+            "section": "4.4 成功标准",
+            "saved": true,
+            "task": "@Codex 请补充生成、采纳、执行与回写四阶段的埋点及分母。",
+            "sourceId": "anker-plan",
+            "commentId": "c-adoption",
+            "messageId": "q-adoption",
+            "originalQuestion": "@Via 生成了纪要，就算完成了 Agent 闭环吗？",
+            "explanation": "不算。策划文档把闭环价值拆成卡片生成率、建议动作采纳率、每段录音平均完成动作数与执行成功率。纪要生成只证明内容产出；还要观察用户是否确认动作、目标对象是否创建成功，以及卡片是否收到结果回写。建议把这些阶段分别埋点，避免把「生成」混成「完成」。"
+          },
+          {
+            "id": "idempotency",
+            "doc": 1,
+            "day": "2026-10-11",
+            "quote": "幂等键保证「确认一次、生效一次」。",
+            "question": "@Via 已经确认过的动作重试时，为什么还需要幂等？",
+            "answer": "超时不等于执行失败：目标对象可能已经创建，只是回执丢了。如果每次重试都当成新请求，就可能重复建任务。PRD 要求消费端幂等，并用动作幂等键保证同一个执行意图只生效一次。重试应复用同一意图的键；用户修改关键参数产生新意图时，需要另行定义版本与键的关系。",
+            "title": "创建任务超时后，重试应如何处理？",
+            "options": [
+              "每次换一个键重新创建",
+              "跳过权限校验直接重试",
+              "复用同一执行意图的幂等键"
+            ],
+            "correct": 2,
+            "topic": "幂等与重试",
+            "section": "9.5 一致性与可靠性",
+            "saved": true,
+            "task": "@Claude 请补充执行已成功但回执丢失的幂等回归用例。",
+            "sourceId": "anker-prd",
+            "commentId": "c-idempotency",
+            "messageId": "q-idempotency",
+            "originalQuestion": "@Via 已经确认过的动作重试时，为什么还需要幂等？",
+            "explanation": "超时不等于执行失败：目标对象可能已经创建，只是回执丢了。如果每次重试都当成新请求，就可能重复建任务。PRD 要求消费端幂等，并用动作幂等键保证同一个执行意图只生效一次。重试应复用同一意图的键；用户修改关键参数产生新意图时，需要另行定义版本与键的关系。"
+          },
+          {
+            "id": "acl",
+            "doc": 1,
+            "day": "2026-10-11",
+            "quote": "只能使用该用户本人有权访问的内容",
+            "question": "@Via 企业买的设备，能让 Agent 读到所有项目文档吗？",
+            "answer": "不能。FR-4 要求按当前用户权限过滤上下文，企业采购设备不能扩大个人权限。无权访问的文档不能进入 Agent 输入，也不能出现在卡片中。企业模式在这份提案中属于 P1；P0 应复用现有 ACL，并保留可审计的检索与注入记录。",
+            "title": "相关项目文档无权访问时，Agent 应怎么做？",
+            "options": [
+              "排除该文档并说明信息不足",
+              "企业设备可绕过权限",
+              "先读进模型再隐藏引用"
+            ],
+            "correct": 0,
+            "topic": "权限边界",
+            "section": "FR-4 上下文关联与增强",
+            "sourceId": "anker-prd",
+            "commentId": "c-acl",
+            "messageId": "q-acl",
+            "originalQuestion": "@Via 企业买的设备，能让 Agent 读到所有项目文档吗？",
+            "explanation": "不能。FR-4 要求按当前用户权限过滤上下文，企业采购设备不能扩大个人权限。无权访问的文档不能进入 Agent 输入，也不能出现在卡片中。企业模式在这份提案中属于 P1；P0 应复用现有 ACL，并保留可审计的检索与注入记录。"
+          }
+        ],
+        "choices": {},
+        "submittedAt": null,
+        "articles": [
+          {
+            "title": "Making retries safe with idempotent APIs",
+            "publisher": "Amazon Builders’ Library",
+            "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+            "topic": "幂等与重试",
+            "reason": "结合超时重试，理解如何识别同一个请求意图并避免重复副作用。"
+          },
+          {
+            "title": "Authorization Cheat Sheet",
+            "publisher": "OWASP",
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+            "topic": "权限边界",
+            "reason": "把最小权限与逐次权限检查落实到上下文检索和工具执行。"
+          },
+          {
+            "title": "Building effective agents",
+            "publisher": "Anthropic",
+            "url": "https://www.anthropic.com/engineering/building-effective-agents",
+            "topic": "闭环指标",
+            "reason": "理解固定工作流与自主 Agent 的边界，再决定确认、工具与评估如何组合。"
+          }
+        ],
+        "conversation": []
+      }
+    }
+  }
+}
